@@ -15,7 +15,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
     xfce4 xfce4-goodies \
-    tigervnc-standalone-server \
+    tightvncserver \
     firefox \
     wget unzip curl python3 \
     openssh-server \
