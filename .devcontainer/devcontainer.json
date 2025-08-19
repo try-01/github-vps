@@ -1,0 +1,21 @@
+{
+  "name": "Ubuntu VNC Ngrok Codespace",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "args": {
+      "USERNAME": "bebas",
+      "USER_PASSWORD": "anehkan",
+      "VNC_PASSWORD": "anehkan",
+      "REGION": "ap",
+      "NGROK_TOKEN": "${localEnv:NGROK_TOKEN}"
+    }
+  },
+  "forwardPorts": [22],
+  "portsAttributes": {
+    "22": {
+      "label": "SSH (via Port Forwarding)"
+    }
+  },
+  "postCreateCommand": "echo 'Container is ready. Check terminal for Ngrok VNC address.'",
+  "remoteUser": "bebas"
+}
